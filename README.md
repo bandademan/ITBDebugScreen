@@ -1,17 +1,18 @@
 # Inside The Backrooms DebugScreen
+## Description:
 A MelonLoader Mod for Inside the Backrooms that displays a debug screen
 
-How to use:
+## How to use:
   Install Melonloader to Inside the Backrooms
+  
   Download the .dll and place it in the mods folder 
 
-Controls:
+## Controls:
   '~' key to open the debug screen
 
-TODO:
+## TODO:
   Add more variables to Debug Screen
   Fix Issues below
 
-Current Known Issues:
+## Current Known Issues:
   Breaks if debug info is open when exiting to menu
-  
