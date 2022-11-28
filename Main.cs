@@ -14,21 +14,24 @@ namespace ITBDebugMenu
 {
     public class Main : MelonMod
     {
+        bool isMainLevel = false;
         bool isDebugMenu = false;
 
         PlayerStats playerStats;
         RoomManager roomManager;
-        InGameLobby inGameLobby;
+        //InGameLobby inGameLobby;
         GameObject playerObject;
 
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
+            isMainLevel = false;
             if (sceneName == "MainLevel")
             {
+                isMainLevel = true;
                 LoggerInstance.Msg("MainLevel Scene was loaded!");
 
                 roomManager = FindObjectOfType<RoomManager>();
-                inGameLobby = FindObjectOfType<InGameLobby>();
+                //inGameLobby = FindObjectOfType<InGameLobby>();
                 playerObject = GameObject.FindGameObjectWithTag("Player");
 
                 var foundPlayerStats = FindObjectsOfType<PlayerStats>();
@@ -44,7 +47,7 @@ namespace ITBDebugMenu
         }
         public override void OnUpdate()
         {
-            if (Keyboard.current.backquoteKey.wasPressedThisFrame)
+            if (Keyboard.current.backquoteKey.wasPressedThisFrame && isMainLevel)
             {
                 if (isDebugMenu)
                 {
@@ -74,7 +77,6 @@ namespace ITBDebugMenu
                 + "\n<size=15>Radiation: " + playerStats.m_Radiation + "</size>"
                 + "\n<b><size=20>Game Information</size></b>"
                 + "\n<size=15>Difficulty: " + roomManager.m_RoomDifficulty + "</size>"
-                + "\n<size=15>PlayerCount: " + inGameLobby.PlayersCount + "</size>"
                 );
 
             //GUI.Box(new Rect(0, 0, 300, 500), "Debug Menu"
