@@ -16,3 +16,5 @@ A MelonLoader Mod for Inside the Backrooms that displays a debug screen
 
 ## Current Known Issues:
   Breaks if debug info is open when exiting to menu
+  Not working in multiplayer
+ 
