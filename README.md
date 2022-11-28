@@ -1,4 +1,4 @@
-# Inside The Backrooms DebugScreen
+# Inside The Backrooms Debug Screen
 ## Description:
 A MelonLoader Mod for Inside the Backrooms that displays a debug screen
 
