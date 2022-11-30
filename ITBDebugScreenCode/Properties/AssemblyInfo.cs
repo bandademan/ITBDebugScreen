@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(ITBDebugScreen.Main), "Inside the Backrooms Debug Screen", "1.0.0", "Mr. Monocle")]
+[assembly: MelonInfo(typeof(ITBDebugScreen.Main), "Inside the Backrooms Debug Screen", "1.0.1", "Mr. Monocle")]
 [assembly: MelonGame("Blueplant Studios", "Inside the Backrooms")]
 
 // General Information about an assembly is controlled through the following

@@ -19,7 +19,6 @@ namespace ITBDebugScreen
 
         PlayerStats playerStats;
         RoomManager roomManager;
-        //InGameLobby inGameLobby;
         GameObject playerObject;
 
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
@@ -31,7 +30,6 @@ namespace ITBDebugScreen
                 LoggerInstance.Msg("MainLevel Scene was loaded!");
 
                 roomManager = FindObjectOfType<RoomManager>();
-                //inGameLobby = FindObjectOfType<InGameLobby>();
                 playerObject = GameObject.FindGameObjectWithTag("Player");
 
                 var foundPlayerStats = FindObjectsOfType<PlayerStats>();
@@ -65,7 +63,6 @@ namespace ITBDebugScreen
         
         private void DrawDebugMenu()
         {
-            //GUI.Label(new Rect(20, 20, 1000, 200), "<b><color=cyan><size=100>Frozen</size></color></b>");
 
             GUI.Label(new Rect(10, 10, 1000, 1000), "<b><size=25>ITB Debug Info</size></b>"
                 + "\n<b><size=25>by @Mr. Monocle#0433</size></b>"
@@ -75,38 +72,15 @@ namespace ITBDebugScreen
                 + "\n<size=15>Stamina: " + playerStats.Stamina.ToString("0.000") + "</size>"
                 + "\n<size=15>Anxiety: " + playerStats.Anxiety.ToString("0.000") + "</size>"
                 + "\n<size=15>Radiation: " + playerStats.m_Radiation + "</size>"
+                + "\n<size=15>Energy Boosted: " + playerStats.EnergyBoosted + "</size>"
+                + "\n<size=15>Invulnerability: " + playerStats.Haveinvulnerability + "</size>"
+                + "\n<size=15>Dead: " + playerStats.isDead + "</size>"
+                + "\n<size=15>Pursued By Monster: " + playerStats.IsPursuitedByMonster + "</size>"
+                + "\n<size=15>Inside Rediation Zone: " + playerStats.m_InsideRadiationZone + "</size>"
                 + "\n<b><size=20>Game Information</size></b>"
                 + "\n<size=15>Difficulty: " + roomManager.m_RoomDifficulty + "</size>"
                 );
 
-            //GUI.Box(new Rect(0, 0, 300, 500), "Debug Menu"
-            //    + "\nHealth: " + playerStats.Health
-            //    + "\nStamina: " + playerStats.Stamina
-            //    + "\nAnxiety: " + playerStats.Anxiety
-            //    + "\nEnergy Boosted: " + playerStats.EnergyBoosted
-            //    + "\nHaveinvulnerability: " + playerStats.Haveinvulnerability
-            //    + "\nisDead: " + playerStats.isDead
-            //    + "\nisParalized: " + playerStats.IsParalized
-            //    + "\nisPermanentDead: " + playerStats.isPermanentDead
-            //    + "\nisPursuitedByMonster: " + playerStats.IsPursuitedByMonster
-            //    + "\nm_CurrentMonsterTargeted: " + playerStats.m_CurrentMonsterTargeted
-            //    + "\nm_EnergyBoostTimer: " + playerStats.m_EnergyBoostTimer
-            //    + "\nm_HasEnergyBoost: " + playerStats.m_HasEnergyBoost
-            //    + "\nm_HasInvulnerability: " + playerStats.m_HasInvulnerability
-            //    + "\nm_InsideRadiationZone: " + playerStats.m_InsideRadiationZone
-            //    + "\nm_LastElectrifyTime: " + playerStats.m_LastElectrifyTime
-            //    + "\nm_LastParalizeTime: " + playerStats.m_LastParalizeTime
-            //    + "\nm_LastToxicTime: " + playerStats.m_LastToxicTime
-            //    + "\nm_MusicTimer: " + playerStats.m_MusicTimer
-            //    + "\nm_NextUnparalizeTime: " + playerStats.m_NextUnparalizeTime
-            //    + "\nm_Paralized: " + playerStats.m_Paralized
-            //    + "\nm_ParalizeTime: " + playerStats.m_ParalizeTime
-            //    + "\nm_PlayersDeathsCount: " + playerStats.m_PlayersDeathsCount
-            //    + "\nm_Radiation: " + playerStats.m_Radiation
-            //    + "\nm_RadiationKillTime: " + playerStats.m_RadiationKillTime
-            //    + "\nm_RadiationTime: " + playerStats.m_RadiationTime
-            //    + "\nm_VulnerableTimeout: " + playerStats.m_VulnerableTimeout
-            //    );
         }
 
     }
