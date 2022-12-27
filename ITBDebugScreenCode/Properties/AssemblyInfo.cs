@@ -4,16 +4,15 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 
 [assembly: MelonInfo(typeof(ITBDebugScreen.Main), "Inside the Backrooms Debug Screen", "1.0.1", "Mr. Monocle")]
-[assembly: MelonGame("Blueplant Studios", "Inside the Backrooms")]
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ITBDebugScreen")]
+[assembly: AssemblyTitle("ITBDebugMenu")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ITBDebugScreen")]
+[assembly: AssemblyProduct("ITBDebugMenu")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -24,7 +23,7 @@ using MelonLoader;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6ddd3888-2a61-4d3c-86b0-e79d87b66c0c")]
+[assembly: Guid("a625fd8d-2ed7-4336-b738-c52288dd7218")]
 
 // Version information for an assembly consists of the following four values:
 //
